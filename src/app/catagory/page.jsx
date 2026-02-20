@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Link from 'next/link';
 
 const CategoryPage = () => {
   const [categories, setCategories] = useState([]);
@@ -49,7 +50,11 @@ const CategoryPage = () => {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {categories.slice(startIdx, startIdx + visibleCount).map(category => (
-              <div key={category.id} className="bg-gray-100 rounded-tl-[48px] rounded-tr-none rounded-bl-none rounded-br-[48px] p-8 flex flex-col justify-between min-h-96 relative">
+              <Link
+                key={category.id}
+                href={`/product?category=${encodeURIComponent(category.name)}`}
+                className="bg-gray-100 rounded-tl-[48px] rounded-tr-none rounded-bl-none rounded-br-[48px] p-8 flex flex-col justify-between min-h-96 relative transition hover:shadow-2xl hover:scale-105 duration-300 cursor-pointer"
+              >
                 <img
                   src={category.image}
                   alt={category.name}
@@ -59,11 +64,11 @@ const CategoryPage = () => {
                   <h3 className="text-2xl font-extrabold text-black">
                     {category.name.toUpperCase()}<br />SHOES
                   </h3>
-                  <button className="bg-black text-white rounded-lg p-3 text-xl">
+                  <div className="bg-black text-white rounded-lg p-3 text-xl hover:bg-blue-700 transition">
                     <span>&#8599;</span>
-                  </button>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         )}
