@@ -24,13 +24,13 @@ const NewDrop = () => {
   return (
     <section className=" py-12 px-4 md:px-12  mb-10 ">
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-10 gap-4">
-        <h2 className="text-3xl sm:text-5xl font-extrabold leading-tight uppercase">
+      <div className="flex flex-row md:items-center md:justify-between mb-5 gap-4">
+        <h2 className="text-xl sm:text-5xl font-extrabold leading-tight uppercase">
           DON’T MISS OUT <br className="hidden md:block" />
           NEW DROPS
         </h2>
 
-        <button className="bg-blue-600 hover:bg-blue-700 text-white text-xs md:text-sm font-bold px-5 py-3 rounded-lg w-fit">
+        <button className="bg-blue-600 hover:bg-blue-700 text-white text-xs md:text-sm font-bold  px-3 py-2 md:px-5 md:py-3 rounded-lg w-fit">
           SHOP NEW DROPS
         </button>
       </div>

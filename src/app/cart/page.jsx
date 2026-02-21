@@ -12,10 +12,10 @@ const CartPage = () => {
   const total = subtotal + delivery + tax;
 
   return (
-    <div className="min-h-screen bg-gray-100 py-6 sm:py-8 lg:py-12">
+    <div className="min-h-screen py-6 sm:py-8 lg:py-8">
       <div className="mx-auto px-3 sm:px-4 lg:px-12">
         {/* Header Section */}
-        <div className="bg-white rounded-lg p-4 sm:p-6 lg:p-8 mb-6 sm:mb-8 lg:mb-12">
+        <div className="  p-4 sm:p-6 lg:p-8 mb-6 sm:mb-8">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black mb-2">
             Saving to celebrate
           </h1>
@@ -46,7 +46,7 @@ const CartPage = () => {
                       className="flex flex-col sm:flex-row gap-4 sm:gap-6 p-4 sm:p-6 bg-gray-50 rounded-lg border border-gray-200"
                     >
                       {/* Product Image */}
-                      <div className="shrink-0 w-full sm:w-32 h-32">
+                      <div className="shrink-0 w-full sm:w-36 h-40">
                         <img
                           src={item.image}
                           alt={item.name}
@@ -132,7 +132,7 @@ const CartPage = () => {
           {/* Order Summary Section */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-lg p-4 sm:p-6 lg:p-8 sticky top-4">
-              <h2 className="text-2xl sm:text-3xl font-black mb-6">Order Summary</h2>
+              <h2 className="text-2xl sm:text-2xl font-black mb-6">Order Summary</h2>
 
               <div className="space-y-4 mb-6 pb-6 border-b border-gray-200">
                 <div className="flex justify-between text-sm sm:text-base">
@@ -163,6 +163,7 @@ const CartPage = () => {
               </a>
             </div>
           </div>
+          
         </div>
       </div>
     </div>
